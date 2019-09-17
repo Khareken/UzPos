@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">UzPos</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="uzpos_text">UzPOS</string>
+    <string name="enlightening_life_text">Enlightening Life</string>
+    <string name="enlightening_uzbekistan_text">Enlightening Uzbekistan</string>
+    <string name="email_hint">email</string>
+    <string name="forgot_password_text">forgot password?</string>
+    <string name="login_btn_text">Login</string>
+    <string name="www_aliensoft_uz_text">www.aleinsoft.uz</string>
+    <string name="phone_number_text">+99809557744</string>
+    <string name="techsupport_aliensoft_uz_text">techsupport@aliensoft.uz</string>
+    <string name="support_text">Support</string>
+    <string name="password_hint_txt">password</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_00">00</string>
+    <string name="_0">0</string>
+    <string name="_dot">.</string>
+
+    <string name="search">Search</string>
+    <string name="title_favourite">title_favourite</string>
+    <string name="title_fullscreen">title_fullscreen</string>
+    <string name="sale_date_text">Дата продажи:</string>
+    <string name="status_of_sale_text">Статус продажи:</string>
+    <string name="id_of_sale_text">ID продажи:</string>
+    <string name="subtotal_of_sale_text">Промеж. итог:</string>
+    <string name="discount_of_sale_text">Cкидка:</string>
+    <string name="sum_of_sale_text">Сумма:</string>
+    <string name="sale_date">Sep 15, 2019</string>
+    <string name="status_of_sale">в ожидании</string>
+    <string name="id_of_sale">#1234567</string>
+    <string name="subtotal_of_sale">2,930.00</string>
+    <string name="discount_of_sale">12%</string>
+    <string name="sum_of_sale">12,930.00</string>
+    <string name="C">C</string>
+    <string name="pay_btn_text">Оплата</string>
+    <string name="_N">№</string>
+    <string name="Name_text">Name</string>
+    <string name="Price_text">Price</string>
+    <string name="Amount_text">Amount</string>
+    <string name="Sum_text">Sum</string>
+</resources>

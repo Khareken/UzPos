@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#F5F5F5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horri"
+        app:layout_constraintEnd_toStartOf="@id/guideline_verti"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#576271"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/_N"
+            android:text="@string/_N"
+            android:textSize="@dimen/number_btn_text_size"
+            android:layout_gravity="center"
+            />
+        <TextView
+
+            android:textColor="#576271"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Name_text"
+            android:id="@+id/Name_text"
+            android:textSize="@dimen/number_btn_text_size"/>
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#576271"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Price_text"
+            android:id="@+id/Price_text"
+            android:textSize="@dimen/number_btn_text_size"/>
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#576271"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Amount_text"
+            android:id="@+id/Amount_text"
+            android:textSize="@dimen/number_btn_text_size"/>
+        <TextView
+            android:layout_weight="1"
+            android:textColor="#576271"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Sum_text"
+            android:id="@+id/Sum_text"
+            android:textSize="@dimen/number_btn_text_size"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_5"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button_4"
+        app:layout_constraintTop_toBottomOf="@+id/button_2" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_00"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/button_7" />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_1"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/sum_of_sale_text" />
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_4"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/button_1" />
+
+    <Button
+        android:id="@+id/button_7"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_7"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/button_4" />
+
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="424dp"
+        android:layout_height="56dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:drawableEnd="@drawable/ic_search_black_24dp"
+        android:hint="@string/search"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sale_date_text"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="96dp"
+        android:paddingStart="2dp"
+        android:text="@string/sale_date_text"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/status_of_sale_text"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/status_of_sale_text"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@id/sale_date_text"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/id_of_sale_text"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/id_of_sale_text"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/status_of_sale_text"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/subtotal_of_sale_text"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/subtotal_of_sale_text"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/id_of_sale_text"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/discount_of_sale_text"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/discount_of_sale_text"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/subtotal_of_sale_text"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/sum_of_sale_text"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/sum_of_sale_text"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/discount_of_sale_text"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/sale_date"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:paddingStart="2dp"
+        android:text="@string/sale_date"
+        android:textColor="@color/standard_text_color"
+        app:layout_constraintStart_toEndOf="@+id/sale_date_text"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/status_of_sale"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/status_of_sale"
+        android:textColor="@color/standard_text_color"
+        app:layout_constraintStart_toEndOf="@+id/status_of_sale_text"
+        app:layout_constraintTop_toBottomOf="@+id/sale_date"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/id_of_sale"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/id_of_sale"
+        android:textColor="@color/standard_text_color"
+        app:layout_constraintStart_toEndOf="@+id/id_of_sale_text"
+        app:layout_constraintTop_toBottomOf="@+id/status_of_sale"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/subtotal_of_sale"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/subtotal_of_sale"
+        android:textColor="@color/standard_text_color"
+        app:layout_constraintStart_toEndOf="@+id/subtotal_of_sale_text"
+        app:layout_constraintTop_toBottomOf="@+id/id_of_sale"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/discount_of_sale"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/discount_of_sale"
+        android:textColor="@color/standard_text_color"
+        app:layout_constraintStart_toEndOf="@+id/discount_of_sale_text"
+        app:layout_constraintTop_toBottomOf="@+id/subtotal_of_sale"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/sum_of_sale"
+        android:layout_width="@dimen/sale_info_width"
+        android:layout_height="@dimen/sale_info_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:text="@string/sum_of_sale"
+        android:textColor="@color/standard_text_color"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/sum_of_sale_text"
+        app:layout_constraintTop_toBottomOf="@+id/discount_of_sale"
+        tools:ignore="RtlSymmetry" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_verti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.63125" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_white_bordered_gray"
+
+        android:text="@string/_2"
+        android:textColor="@color/standard_text_color"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button_1"
+        app:layout_constraintTop_toBottomOf="@+id/sum_of_sale" />
+
+    <Button
+        android:id="@+id/button_8"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_8"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button_7"
+        app:layout_constraintTop_toBottomOf="@+id/button_5" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button_8" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="@dimen/buttons_standard_margin"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_3"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button_2"
+        app:layout_constraintTop_toBottomOf="@+id/sum_of_sale" />
+
+    <Button
+        android:id="@+id/button_6"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_margin="@dimen/buttons_standard_margin"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_6"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button_5"
+        app:layout_constraintTop_toBottomOf="@+id/button_3" />
+
+    <Button
+        android:id="@+id/button_9"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_margin="@dimen/buttons_standard_margin"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_9"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button_8"
+        app:layout_constraintTop_toBottomOf="@+id/button_6" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_margin="@dimen/buttons_standard_margin"
+        android:background="@drawable/bg_white_bordered_gray"
+        android:text="@string/_dot"
+        android:textColor="#000000"
+        android:textSize="@dimen/number_btn_text_size"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/button_9" />
+
+    <Button
+        android:id="@+id/button_C"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/C"
+        android:textColor="#636363"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_3"
+        app:layout_constraintTop_toBottomOf="@+id/sum_of_sale" />
+
+    <ImageButton
+        android:id="@+id/button19"
+        android:layout_width="100dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_keyboard_return_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_9"
+        app:layout_constraintTop_toBottomOf="@+id/button18" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="424dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="#28B473"
+        android:text="@string/pay_btn_text"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/button16" />
+
+    <ImageButton
+        android:id="@+id/button18"
+        android:layout_width="@dimen/calculateBtn_width"
+        android:layout_height="@dimen/calculateBtn_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#D6D7D7"
+        android:src="@drawable/ic_backspace_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_6"
+        app:layout_constraintTop_toBottomOf="@+id/button_C" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/products_recyclerView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_verti"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_horri" />
+</androidx.constraintlayout.widget.ConstraintLayout>
