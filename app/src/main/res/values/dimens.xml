@@ -12,4 +12,6 @@
     <dimen name="sale_info_width">160dp</dimen>
     <dimen name="sale_info_height">19dp</dimen>
     <dimen name="number_btn_text_size">24sp</dimen>
+    <dimen name="top_element_text_size">20sp</dimen>
+    <dimen name="standard_radius">4dp</dimen>
 </resources>
