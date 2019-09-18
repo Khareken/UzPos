@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import uz.aliensoft.uzpos.R
 
-class item_line : AppCompatActivity() {
+class ItemLineActivity : AppCompatActivity() {
     private val mAdapter: ProductListAdapter = ProductListAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {

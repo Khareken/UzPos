@@ -6,57 +6,60 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:background="#F5F5F5"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#F5F5F5"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@id/guideline_horri"
         app:layout_constraintEnd_toStartOf="@id/guideline_verti"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_weight="1"
-            android:textColor="#576271"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/_N"
-            android:text="@string/_N"
-            android:textSize="@dimen/number_btn_text_size"
-            android:layout_gravity="center"
-            />
-        <TextView
+        app:layout_constraintTop_toTopOf="parent">
 
-            android:textColor="#576271"
-            android:layout_weight="1"
+        <TextView
+            android:id="@+id/_N"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Name_text"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/_N"
+            android:textColor="#576271"
+            android:textSize="@dimen/number_btn_text_size" />
+
+        <TextView
             android:id="@+id/Name_text"
-            android:textSize="@dimen/number_btn_text_size"/>
-        <TextView
-            android:layout_weight="1"
-            android:textColor="#576271"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Price_text"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Name_text"
+            android:textColor="#576271"
+            android:textSize="@dimen/number_btn_text_size" />
+
+        <TextView
             android:id="@+id/Price_text"
-            android:textSize="@dimen/number_btn_text_size"/>
-        <TextView
-            android:layout_weight="1"
-            android:textColor="#576271"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Amount_text"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Price_text"
+            android:textColor="#576271"
+            android:textSize="@dimen/number_btn_text_size" />
+
+        <TextView
             android:id="@+id/Amount_text"
-            android:textSize="@dimen/number_btn_text_size"/>
-        <TextView
-            android:layout_weight="1"
-            android:textColor="#576271"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Sum_text"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Amount_text"
+            android:textColor="#576271"
+            android:textSize="@dimen/number_btn_text_size" />
+
+        <TextView
             android:id="@+id/Sum_text"
-            android:textSize="@dimen/number_btn_text_size"/>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Sum_text"
+            android:textColor="#576271"
+            android:textSize="@dimen/number_btn_text_size" />
     </LinearLayout>
 
     <Button
@@ -299,8 +302,8 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
@@ -311,7 +314,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/bg_white_bordered_gray"
-
         android:text="@string/_2"
         android:textColor="@color/standard_text_color"
         android:textSize="@dimen/number_btn_text_size"
@@ -445,9 +447,9 @@
         app:layout_constraintTop_toBottomOf="@+id/button_C" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/products_recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/products_recyclerView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_verti"
         app:layout_constraintStart_toStartOf="parent"
