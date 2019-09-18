@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="808dp"
     android:layout_height="80dp"
-    tools:context=".ItemLineActivity"
+    tools:context=".MainPageFragment"
     android:background="@color/white">
 
     <ImageButton
