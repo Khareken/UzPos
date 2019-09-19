@@ -16,4 +16,5 @@
     <dimen name="standard_radius">4dp</dimen>
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_24dp_Start_Top">24dp</dimen>
 </resources>
