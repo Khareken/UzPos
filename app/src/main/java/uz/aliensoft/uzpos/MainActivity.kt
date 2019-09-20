@@ -42,17 +42,30 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_tools, R.id.nav_share, R.id.nav_send
             ), drawerLayout
         )
+
+        val fragment = MainPageFragment()
+        val tag = MainPageFragment.TAG
+        changeFragment(fragment, tag)
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        navView.setNavigationItemSelectedListener {
-            val fragment : Fragment = MainPageFragment()
-            supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment)
-
+        navView.setNavigationItemSelectedListener { item ->
+            val fragment: Fragment
+            val tag: String
+            when(item.itemId) {
+                R.id.nav_home -> {
+                    fragment = MainPageFragment()
+                    tag = MainPageFragment.TAG
+                }
+                else -> return@setNavigationItemSelectedListener false
+            }
+            changeFragment(fragment, tag)
+            return@setNavigationItemSelectedListener true
         }
     }
 
     private fun changeFragment(fragment: Fragment, tag: String) {
-        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment, tag)
+        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment, tag).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -65,7 +78,5 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
-
 
 }

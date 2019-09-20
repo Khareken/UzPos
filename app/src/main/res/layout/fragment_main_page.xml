@@ -232,7 +232,6 @@
         app:layout_constraintTop_toBottomOf="@+id/discount_of_sale"
         tools:ignore="RtlSymmetry" />
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_verti"
         android:layout_width="wrap_content"
@@ -259,8 +258,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline_number_top"
@@ -350,7 +347,6 @@
             android:layout_height="56dp"
             android:background="#28B473"
             android:text="@string/pay_btn_text"
-
             android:layout_marginStart="@dimen/margin_24dp_Start_Top"
             android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
             android:textColor="#ffffff"
@@ -444,8 +440,7 @@
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
             android:layout_marginBottom="@dimen/margin_small"
-
-            android:background="@color/gray_light"
+            android:background="@drawable/bg_calculator_functions_btn"
             android:text="@string/C"
             android:textColor="#636363"
             android:textSize="24sp"
@@ -489,7 +484,7 @@
 
         <ImageButton
             android:id="@+id/button_enter"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
             android:layout_marginBottom="@dimen/margin_small"
@@ -499,7 +494,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_9"
             app:layout_constraintTop_toBottomOf="@id/button_backspace"
-            app:layout_constraintVertical_weight="2" />
+            app:layout_constraintVertical_weight="2.15" />
 
         <ImageButton
             android:id="@+id/button_backspace"

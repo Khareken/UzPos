@@ -7,16 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_main_page.*
 
-class MainPageFragment : Fragment() {
-    private val mAdapter: ProductListAdapter = ProductListAdapter()
+class MainPageFragment : Fragment(R.layout.fragment_main_page) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_main_page, container, false)
+    companion object {
+        const val TAG = "MainPageFragment"
     }
+
+    private val mAdapter: ProductListAdapter = ProductListAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
