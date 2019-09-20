@@ -92,7 +92,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:gravity="center"
-        android:text="27,960"
+        android:text="Eraeraer"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/product_amount_plus_id"
