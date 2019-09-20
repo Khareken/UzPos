@@ -60,4 +60,12 @@
     <string name="Price_text">Price</string>
     <string name="Amount_text">Amount</string>
     <string name="Sum_text">Sum</string>
+    <string name="menu_main_page">Main page</string>
+    <string name="menu_payment_history">Payment history</string>
+    <string name="menu_repost">Repost</string>
+    <string name="menu_warehouse">Warehouse</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_support">Support</string>
+    <string name="name_azizbek_bakhodirov">Azizbek Bakhodirov</string>
+    <string name="heaeder_admin">Admin</string>
 </resources>

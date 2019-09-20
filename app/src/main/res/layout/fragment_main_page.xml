@@ -259,8 +259,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline_number_top"
@@ -350,7 +348,7 @@
             android:layout_height="56dp"
             android:background="#28B473"
             android:text="@string/pay_btn_text"
-
+            android:layout_marginBottom="@dimen/margin_24dp_Start_Top"
             android:layout_marginStart="@dimen/margin_24dp_Start_Top"
             android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
             android:textColor="#ffffff"
