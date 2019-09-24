@@ -11,9 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,13 +30,31 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send
+                R.id.nav_main_page, R.id.nav_menu_payment_history, R.id.nav_repost,
+                R.id.nav_warehouse, R.id.nav_settings, R.id.nav_support
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        navView.setNavigationItemSelectedListener { menuItem ->
+            val fragment: Fragment
+            val tag: String
+            when (menuItem.itemId) {
+                R.id.nav_main_page -> {
+                    fragment = MainPageFragment()
+                    tag = MainPageFragment.TAG
+                }
+                else -> return@setNavigationItemSelectedListener false
 
+            }
+            changeFragment(fragment, tag)
+            return@setNavigationItemSelectedListener true
+        }
+
+    }
+
+    private fun changeFragment(fragment: Fragment, tag: String) {
+        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

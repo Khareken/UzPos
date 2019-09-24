@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class ProductListAdapter : RecyclerView.Adapter<ProductItemViewHolder>() {
-    private var data: List<Product> = arrayListOf()
-    fun setData(products: List<Product>) {
-        this.data = products
+class MainPageProductListAdapter : RecyclerView.Adapter<ProductItemViewHolder>() {
+    private var data: List<MainPageProductData> = arrayListOf()
+    fun setData(mainPageProductData: List<MainPageProductData>) {
+        this.data = mainPageProductData
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductItemViewHolder {

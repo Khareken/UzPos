@@ -1,11 +1,9 @@
 package uz.aliensoft.uzpos
 
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import uz.aliensoft.uzpos.R
 
 class ProductItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val productNumber: TextView = itemView.findViewById(R.id.product_number_id)
@@ -18,13 +16,13 @@ class ProductItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
     private val productSum: TextView = itemView.findViewById(R.id.product_sum_id)
     private val productClear: ImageButton = itemView.findViewById(R.id.product_clearBtn_id)
 
-    fun populateProduct(product: Product) {
-        productNumber.text = product.number.toString()
-        productName.text = product.name
-        productCode.text = product.code
-        productPrice.text = product.price
-        productAmountText.text = product.amount.toString()
-        productSum.text = product.sum.toString()
+    fun populateProduct(mainPageProductData: MainPageProductData) {
+        productNumber.text = mainPageProductData.number.toString()
+        productName.text = mainPageProductData.name
+        productCode.text = mainPageProductData.code
+        productPrice.text = mainPageProductData.price
+        productAmountText.text = mainPageProductData.amount.toString()
+        productSum.text = mainPageProductData.sum.toString()
 
     }
 }

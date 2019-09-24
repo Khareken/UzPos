@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/chut_chut_gray_white"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -29,7 +30,7 @@
             android:id="@+id/Name_text"
             android:layout_width="240dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+
             android:gravity="center_vertical"
             android:text="@string/Name_text"
             android:textColor="#576271"
@@ -39,17 +40,16 @@
             android:id="@+id/Price_text"
             android:layout_width="144dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+
             android:gravity="center"
             android:text="@string/Price_text"
             android:textColor="#576271"
             android:textSize="@dimen/top_element_text_size" />
-
         <TextView
             android:id="@+id/Amount_text"
             android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+
             android:gravity="center"
             android:text="@string/Amount_text"
             android:textColor="#576271"
@@ -59,7 +59,6 @@
             android:id="@+id/Sum_text"
             android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="@string/Sum_text"
             android:textColor="#576271"
@@ -259,6 +258,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/chut_chut_gray_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline_number_top"
@@ -268,6 +268,7 @@
             android:id="@+id/button_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
+           android:layout_marginTop="@dimen/margin_small"
             android:layout_marginStart="@dimen/margin_24dp_Start_Top"
             android:layout_marginEnd="@dimen/margin_small"
             android:layout_marginBottom="@dimen/margin_small"
@@ -316,6 +317,7 @@
             android:id="@+id/button_2"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_small"
             android:layout_marginEnd="@dimen/margin_small"
             android:layout_marginBottom="@dimen/margin_small"
             android:background="@drawable/bg_white_bordered_gray"
@@ -379,6 +381,7 @@
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/margin_small"
             android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
             android:background="@drawable/bg_white_bordered_gray"
             android:text="@string/_3"
             android:textColor="#000000"
@@ -441,6 +444,7 @@
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
             android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
             android:background="@drawable/bg_calculator_functions_btn"
             android:text="@string/C"
             android:textColor="#636363"
@@ -521,6 +525,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.54" />
+        app:layout_constraintGuide_percent="0.48" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

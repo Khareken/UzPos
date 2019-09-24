@@ -66,6 +66,7 @@
     <TextView
         android:id="@+id/product_amount_text_id"
         android:layout_width="48dp"
+        android:gravity="center"
         android:layout_height="48dp"
         android:textColor="#000000"
         android:background="@drawable/bg_gray"
