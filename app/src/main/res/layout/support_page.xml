@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/support_page_uz_pos_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/uzpos_support_oage"
+        android:textColor="@color/green_anywhere"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/big_text"
+        android:layout_width="482dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/motivation_text"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/support_page_uz_pos_text" />
+
+    <Button
+        android:id="@+id/support_page_number"
+        android:layout_width="480dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_24dp_Start_Top"
+        android:background="@drawable/support_number_bg"
+        android:drawableStart="@drawable/ic_call_white_24dp"
+        android:paddingStart="28dp"
+        android:paddingEnd="40dp"
+        android:text="@string/_998_99_815_09_22"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/big_text" />
+
+    <Button
+        android:id="@+id/support_page_bot_link"
+        android:layout_width="480dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_24dp_Start_Top"
+        android:background="@drawable/support_page_bot_btn_bg"
+        android:drawableStart="@drawable/ic_telegram"
+        android:paddingStart="28dp"
+        android:paddingEnd="40dp"
+        android:textAllCaps="false"
+        android:text="@string/uzpos_bot"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/support_page_number" />
+
+    <Button
+        android:layout_width="480dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_24dp_Start_Top"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/support_site_btn_bg"
+        android:drawableStart="@drawable/ic_globus_black_40dp"
+        android:gravity="center"
+        android:paddingStart="28dp"
+        android:paddingEnd="40dp"
+        android:text="@string/uzpos_site_text"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/support_page_bot_link" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

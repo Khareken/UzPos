@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="808dp"
     android:layout_height="80dp"
-    tools:context=".MainPageFragment"
+    tools:context=".ui.home.MainPageFragment"
     android:background="@color/white">
 
     <ImageButton
@@ -25,7 +25,7 @@
         android:src="@drawable/ic_add_black_24dp"
         android:background="@drawable/bg_increase_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_amount_text_id"
+        app:layout_constraintStart_toEndOf="@id/product_amount_text"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -63,8 +63,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/product_amount_text_id"
+    <EditText
+        android:id="@+id/product_amount_text"
         android:layout_width="48dp"
         android:gravity="center"
         android:layout_height="48dp"

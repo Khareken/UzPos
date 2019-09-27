@@ -1,7 +1,8 @@
-package uz.aliensoft.uzpos
+package uz.aliensoft.uzpos.ui.main
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -12,6 +13,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
+import uz.aliensoft.uzpos.R
+import uz.aliensoft.uzpos.ui.home.MainPageFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -30,32 +34,18 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_main_page, R.id.nav_menu_payment_history, R.id.nav_repost,
-                R.id.nav_warehouse, R.id.nav_settings, R.id.nav_support
+                R.id.nav_main_page,
+                R.id.nav_support
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        navView.setNavigationItemSelectedListener { menuItem ->
-            val fragment: Fragment
-            val tag: String
-            when (menuItem.itemId) {
-                R.id.nav_main_page -> {
-                    fragment = MainPageFragment()
-                    tag = MainPageFragment.TAG
-                }
-                else -> return@setNavigationItemSelectedListener false
-
-            }
-            changeFragment(fragment, tag)
-            return@setNavigationItemSelectedListener true
-        }
 
     }
 
-    private fun changeFragment(fragment: Fragment, tag: String) {
-        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment).commit()
-    }
+//    private fun changeFragment(fragment: Fragment, tag: String) {
+//        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment).commit()
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
