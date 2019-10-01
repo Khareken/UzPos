@@ -28,7 +28,7 @@ class WarehouseProductAdapter(private val onWarehouseBtnClickListener: OnWarehou
             WarehouseProductViewHolder(itemView)
         } else {
             itemView = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_warehouse_button, parent, false)
+                .inflate(R.layout.item_add_green_button, parent, false)
             WarehouseButtonViewHolder(itemView)
         }
     }

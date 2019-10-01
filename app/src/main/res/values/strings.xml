@@ -73,4 +73,15 @@
     <string name="uzpos_support_oage">UzPos</string>
     <string name="_998_99_815_09_22">+998 99 815 09 22</string>
     <string name="uzpos_site_text">uzpos.uz</string>
+    <string name="category_branch_category_description_text">Овощи, Фрукты, Зелень, Сухофрукты, Орехи</string>
+    <string name="categories_text">Категории</string>
+    <string name="vse_produkti">Все продукты</string>
+    <string name="ovoshi">Овощи</string>
+    <string name="frukti">Фрукты</string>
+    <string name="zelen">Зелень</string>
+    <string name="suxofrukti_orexi">Сухофрукты/Орехи</string>
+    <string name="news">Новые</string>
+    <string name="skidki">Скидки</string>
+    <string name="aksii">Акции</string>
+    <string name="assorti_iz_suxoproduktov_lazzat">Ассорти из сухофруктов Лаззат</string>
 </resources>

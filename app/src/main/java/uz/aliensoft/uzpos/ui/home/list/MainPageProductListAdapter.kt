@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import uz.aliensoft.uzpos.R
 import uz.aliensoft.uzpos.data.model.MainPageProductData
 
-class MainPageProductListAdapter : RecyclerView.Adapter<ProductItemViewHolder>(), OnMainPageItemBtnClickListener {
+class MainPageProductListAdapter : RecyclerView.Adapter<ProductItemViewHolder>(),
+    OnMainPageItemClickListener {
     private var models: MutableList<MainPageProductData> = arrayListOf()
 
     fun setData(mainPageProductData: MutableList<MainPageProductData>) {
@@ -15,7 +16,8 @@ class MainPageProductListAdapter : RecyclerView.Adapter<ProductItemViewHolder>()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductItemViewHolder {
-        val itemView =LayoutInflater.from(parent.context).inflate(R.layout.item_line_home_page, parent, false)
+        val itemView =LayoutInflater.from(parent.context).
+            inflate(R.layout.item_line_home_page, parent, false)
         return ProductItemViewHolder(itemView)
     }
 
@@ -24,15 +26,15 @@ class MainPageProductListAdapter : RecyclerView.Adapter<ProductItemViewHolder>()
     }
 
     override fun onBindViewHolder(holder: ProductItemViewHolder, position: Int) {
-        holder.populateProduct(models[position],this, position)
+        holder.populateProduct(models[position], position, this)
     }
 
-    override fun removeItem(model: MainPageProductData) {
-        val pos = models.indexOf(model)
-        models.remove(model)
-        notifyItemRemoved(pos)
-        models.forEachIndexed { index, mainPageProductData ->
-            notifyItemChanged(index)
+    override fun removeItem(mainPageProductData: MainPageProductData) {
+        val pos: Int = models.indexOf(mainPageProductData)
+        models.remove(mainPageProductData)
+    notifyItemRemoved(pos)
+        models.forEachIndexed { indexed, _ ->
+            notifyItemChanged(indexed)
         }
     }
 

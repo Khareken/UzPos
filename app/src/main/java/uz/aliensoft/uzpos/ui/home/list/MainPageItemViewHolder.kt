@@ -21,8 +21,7 @@ class ProductItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
 
     fun populateProduct(
         mainPageProductData: MainPageProductData,
-        onMainPageItemBtnClickListener: OnMainPageItemBtnClickListener,
-        position: Int
+        position: Int, onMainPageItemClickListener: OnMainPageItemClickListener
     ) {
         productNumber.text = (position+1).toString()
         productName.text = mainPageProductData.name
@@ -31,14 +30,13 @@ class ProductItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
         productAmountText.setText(mainPageProductData.count.toString())
         productSum.text = mainPageProductData.sum.toString()
         productClear.setOnClickListener {
-            onMainPageItemBtnClickListener.removeItem(mainPageProductData)
+            onMainPageItemClickListener.removeItem(mainPageProductData)
         }
         productAmountPlus.setOnClickListener {
-            onMainPageItemBtnClickListener.increaseCount(position)
+            onMainPageItemClickListener.increaseCount(position)
         }
         productAmountMinus.setOnClickListener {
-            onMainPageItemBtnClickListener.decreaseCount(position)
+            onMainPageItemClickListener.decreaseCount(position)
         }
-
     }
 }

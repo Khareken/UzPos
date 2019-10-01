@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="166dp"
+    android:layout_height="178dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ImageView
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:src="@drawable/pay"
+    android:id="@+id/category_branch_item_image"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="46dp"
+    android:layout_marginEnd="46dp"
+    />
+    <TextView
+        android:id="@+id/category_branch_item_name"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_branch_item_image"
+        android:text="Ассорти из сухофруктов Лаззат"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#000000"/>
+    <TextView
+        android:id="@+id/category_branch_item_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_branch_item_name"
+        android:text="19 590"
+        android:textSize="14sp"
+
+        android:textStyle="bold"
+        android:textColor="@color/green_anywhere"
+        android:layout_marginTop="@dimen/margin_24dp_Start_Top"
+        android:layout_marginStart="13dp"
+        />
+    <TextView
+        android:id="@+id/category_branch_text_sum_za"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/category_branch_item_sum"
+        app:layout_constraintTop_toTopOf="@id/category_branch_item_sum"
+        android:layout_marginStart="4dp"
+        android:text="сум. за"/>
+    <TextView
+        android:id="@+id/category_branch_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/category_branch_text_sum_za"
+        app:layout_constraintTop_toTopOf="@id/category_branch_text_sum_za"
+        android:text="@string/_1"
+        android:layout_marginStart="6dp"
+        />
+    <TextView
+        android:id="@+id/category_branch_item_kg_sht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/category_branch_quantity"
+        app:layout_constraintTop_toTopOf="@id/category_branch_text_sum_za"
+        android:text="кг."
+        android:layout_marginStart="2dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
