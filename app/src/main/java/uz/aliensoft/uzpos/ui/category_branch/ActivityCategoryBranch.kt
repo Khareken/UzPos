@@ -14,9 +14,8 @@ class ActivityCategoryBranch : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_branch)
         categoryBranchRecyclerView.adapter = mAdapterCategoryBranch
-        categoryBranchRecyclerView.layoutManager = GridLayoutManager(this, 7)
+        categoryBranchRecyclerView.layoutManager = GridLayoutManager(this, 5)
         getData()
-
     }
 
     fun getData() {
@@ -24,6 +23,7 @@ class ActivityCategoryBranch : AppCompatActivity() {
         for (i in 1..20){
             models.add(CategoryBranchProductData(1,"CocaCola", 10000.0,"шт."))
         }
+
         models.add(CategoryBranchItemData(2))
         mAdapterCategoryBranch.setData(models)
     }

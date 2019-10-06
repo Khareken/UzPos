@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,6 +40,15 @@ class MainPageFragment : Fragment(), MainPageView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val countries: Array<out String> = resources.getStringArray(R.array.products_array)
+        ArrayAdapter<String>(
+            context!!,
+            android.R.layout.simple_list_item_1,
+            countries
+        ).also { adapter ->
+            searchView.setAdapter(adapter)
+        }
+
         productsRecyclerView.adapter = mAdapterMainPage
         productsRecyclerView.layoutManager = LinearLayoutManager(context,RecyclerView.VERTICAL,false)
         productsRecyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))

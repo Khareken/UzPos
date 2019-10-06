@@ -84,4 +84,15 @@
     <string name="skidki">Скидки</string>
     <string name="aksii">Акции</string>
     <string name="assorti_iz_suxoproduktov_lazzat">Ассорти из сухофруктов Лаззат</string>
+    <string name="todo">TODO</string>
+    <string name="path">Все категории\t/ Овощи и фрукты /\tФрукты / Персик инжир, вес</string>
+    <string-array name="products_array">
+        <item>Coca-cola</item>
+        <item>PallMall</item>
+        <item>Alpen Gold</item>
+        <item>KitKat</item>
+        <item>Sprite</item>
+
+    </string-array>
+
 </resources>

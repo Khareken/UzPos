@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="602dp"
+    android:layout_height="402dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/dialog_page_path_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/path"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/dialog_page_image"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_page_path_way" />
+
+    <TextView
+        android:id="@+id/dialog_page_product_name"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/assorti_iz_suxoproduktov_lazzat"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/dialog_page_image"
+        app:layout_constraintTop_toTopOf="@id/dialog_page_image" />
+
+    <TextView
+        android:id="@+id/dialog_page_product_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Персик инжир"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/dialog_page_product_name"
+        app:layout_constraintTop_toBottomOf="@id/dialog_page_product_name" />
+
+    <TextView
+        android:id="@+id/dialog_page_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19 590"
+        android:textColor="@color/green_anywhere"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/dialog_page_product_description"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_page_product_description" />
+
+    <TextView
+        android:id="@+id/dialog_page_text_sum_za"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="сум. за"
+        app:layout_goneMarginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/dialog_page_product_price"
+        app:layout_constraintTop_toTopOf="@+id/dialog_page_product_price"
+        android:layout_marginStart="2dp"/>
+
+    <TextView
+        android:id="@+id/dialog_page_1_sht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="1 шт."
+        app:layout_constraintStart_toEndOf="@+id/dialog_page_text_sum_za"
+        app:layout_constraintTop_toTopOf="@+id/dialog_page_text_sum_za" />
+    <ImageButton
+        android:id="@+id/dialog_page_decrease_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_remove_black_24dp"
+        android:background="@drawable/bg_decrease_button"
+        app:layout_constraintStart_toStartOf="@id/dialog_page_product_price"
+        app:layout_constraintTop_toBottomOf="@id/dialog_page_product_price"
+        android:layout_marginTop="32dp"/>
+    <EditText
+        android:id="@+id/dailog_page_editable_text"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+        android:text="@string/_1"
+        android:gravity="center"
+        android:background="@drawable/bg_gray"
+        app:layout_constraintStart_toEndOf="@id/dialog_page_decrease_btn"
+        app:layout_constraintTop_toTopOf="@id/dialog_page_decrease_btn"
+
+        />
+    <ImageButton
+        android:id="@+id/dialog_page_increase_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_add_black_24dp"
+        android:background="@drawable/bg_decrease_button"
+        app:layout_constraintStart_toEndOf="@id/dailog_page_editable_text"
+        app:layout_constraintTop_toBottomOf="@id/dialog_page_product_price"
+        android:layout_marginTop="32dp"/>
+    <Button
+        android:id="@+id/dialog_page_basket_btn"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="@id/dialog_page_product_price"
+        app:layout_constraintTop_toBottomOf="@id/dailog_page_editable_text"
+        android:layout_marginTop="16dp"
+        android:text="В корзину"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_add_shopping_cart_green_24dp"
+        android:paddingStart="56dp"
+        android:paddingEnd="56dp"
+        android:gravity="center"
+        android:textColor="@color/green_anywhere"
+        android:background="@drawable/bg_white_green_bordered"
+        />
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="@id/dialog_page_product_price"
+        app:layout_constraintTop_toBottomOf="@id/dialog_page_basket_btn"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_gray"
+        android:text="Избранное"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_star_border_green_20dp"
+        android:paddingStart="56dp"
+        android:paddingEnd="56dp"
+        android:gravity="center"
+        android:textColor="@color/green_anywhere"
+
+        />
+    <ImageButton
+        android:layout_margin="8dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_cancel_black"
+        android:background="#ffff"
+        android:contentDescription="@string/todo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

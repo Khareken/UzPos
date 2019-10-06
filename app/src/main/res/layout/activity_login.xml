@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -49,26 +50,26 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="70dp"
             android:hint="@string/password_hint_txt"
+            android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_hint_id"
 
             />
 
+
         <EditText
             android:id="@+id/email_hint_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
+            android:inputType="textEmailAddress"
             android:layout_marginTop="80dp"
             android:layout_marginRight="70dp"
             android:hint="@string/email_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/enlightening_uzbekistan_id"
-
-            />
-
+            app:layout_constraintTop_toBottomOf="@id/enlightening_uzbekistan_id" />
 
         <ImageView
             android:id="@+id/support_image_id"
@@ -76,10 +77,10 @@
             android:layout_height="31dp"
             android:layout_marginStart="30dp"
             android:layout_marginBottom="15dp"
-            app:layout_constraintBottom_toTopOf="@id/techsupport_id"
+            app:layout_constraintBottom_toTopOf="@id/techSupport"
 
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/support" />
+            app:srcCompat="@drawable/ic_headset_mic_black_24dp" />
 
         <TextView
             android:id="@+id/enlightening_uzbekistan_id"
@@ -150,16 +151,13 @@
             />
 
         <TextView
-            android:id="@+id/techsupport_id"
+            android:id="@+id/techSupport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginStart="30dp"
             android:text="@string/techsupport_aliensoft_uz_text"
-
             app:layout_constraintBottom_toTopOf="@id/phone_number_id"
             app:layout_constraintStart_toStartOf="parent"
-
             />
 
         <TextView
@@ -169,10 +167,10 @@
             android:layout_marginLeft="5dp"
             android:layout_marginBottom="20dp"
             android:text="@string/support_text"
-
             android:textColor="#27B474"
-            app:layout_constraintBottom_toTopOf="@id/techsupport_id"
+            app:layout_constraintBottom_toTopOf="@id/techSupport"
             app:layout_constraintStart_toEndOf="@id/support_image_id" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -181,6 +179,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.6" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
