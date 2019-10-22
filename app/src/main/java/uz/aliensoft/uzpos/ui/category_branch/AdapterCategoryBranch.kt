@@ -3,7 +3,6 @@ package uz.aliensoft.uzpos.ui.category_branch
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import uz.aliensoft.uzpos.R
 import uz.aliensoft.uzpos.data.model.CategoryBranchItemData
@@ -33,7 +32,7 @@ class AdapterCategoryBranch : RecyclerView.Adapter<RecyclerView.ViewHolder>(),On
             itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_category_branch, parent, false)
         ViewHolderCategoryBranchItem(itemView)
         }else{
-            itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_add_green_button,parent,false)
+            itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_btn_back_green_button,parent,false)
             ViewHolderCategoryBranchAddBtn(itemView)
         }
     }
@@ -53,7 +52,7 @@ class AdapterCategoryBranch : RecyclerView.Adapter<RecyclerView.ViewHolder>(),On
 //        Toast.makeText(this,"$position - item clicked",Toast.LENGTH_SHORT).show()
 //    }
 //
-//    override fun onBtnClicked() {
+//    override fun onBackBtnClicked() {
 //        Toast.makeText(this,"Add button clicked",Toast.LENGTH_SHORT).show()
 //    }
 

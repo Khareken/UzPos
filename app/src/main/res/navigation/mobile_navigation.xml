@@ -12,6 +12,12 @@
 
     <fragment
         android:id="@+id/nav_warehouse"
-        android:name="uz.aliensoft.uzpos.ui.warehouse.WarehousePageFragment"
+        android:name="uz.aliensoft.uzpos.ui.warehouse.CategoryPageFragment"
         tools:layout="@layout/fragment_warehouse" />
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="uz.aliensoft.uzpos.ui.support.SupportFragment"
+        tools:layout="@layout/activity_support" />
+
+
 </navigation>

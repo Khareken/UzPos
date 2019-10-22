@@ -1,110 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="808dp"
-    android:layout_height="80dp"
+    android:layout_width="640dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
     tools:context=".ui.home.MainPageFragment"
     android:background="@color/white">
 
-    <ImageButton
-        android:id="@+id/product_amount_minus_id"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:src="@drawable/ic_remove_black_24dp"
-        android:background="@drawable/bg_decrease_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_price_id"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_weight="7"
+        android:id="@+id/product_number_id"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="20sp" />
 
-    <ImageButton
-        android:id="@+id/product_amount_plus_id"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_add_black_24dp"
-        android:background="@drawable/bg_increase_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_amount_text"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_weight="30"
+        android:layout_width="0dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/product_clearBtn_id"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/ic_cancel_black_24dp"
-        android:background="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_sum_id"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+
+            android:id="@+id/product_name_id"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Coca - cola 1,5L"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginBottom="12dp"
+            android:id="@+id/product_code_id"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:text="4703265110064"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
 
     <TextView
+        android:layout_weight="18"
         android:id="@+id/product_price_id"
-        android:layout_width="144dp"
+        android:layout_width="0dp"
         android:layout_height="24dp"
+        android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:gravity="center"
         android:text="6,990 sum"
         android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_name_id"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/product_number_id"
-        android:layout_width="56dp"
-        android:layout_height="24dp"
-        android:gravity="center"
-        android:text="1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:layout_weight="6"
+        android:id="@+id/product_amount_minus_id"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_remove_black_24dp"
+        android:background="@drawable/bg_decrease_button"
+        android:layout_gravity="center" />
+
 
     <EditText
+        android:layout_weight="6"
         android:id="@+id/product_amount_text"
-        android:layout_width="48dp"
-        android:gravity="center"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:textColor="#000000"
+        android:layout_gravity="center"
         android:background="@drawable/bg_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_amount_minus_id"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:textColor="#000000" />
+
+    <ImageButton
+        android:layout_weight="6"
+        android:id="@+id/product_amount_plus_id"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_add_black_24dp"
+        android:background="@drawable/bg_increase_button"
+        android:layout_gravity="center" />
 
     <TextView
-        android:id="@+id/product_name_id"
-        android:layout_width="240dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:gravity="left"
-        android:text="Coca - cola 1,5L"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/product_number_id"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RtlHardcoded" />
-
-    <TextView
+        android:layout_weight="20"
+        android:layout_gravity="center"
         android:id="@+id/product_sum_id"
-        android:layout_width="160dp"
+        android:layout_width="0dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:gravity="center"
         android:text="27,960"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_amount_plus_id"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="#000000" />
 
-    <TextView
-        android:id="@+id/product_code_id"
-        android:layout_width="240dp"
-        android:layout_height="19dp"
-        android:text="4703265110064"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/product_number_id"
-        app:layout_constraintTop_toBottomOf="@id/product_name_id" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton
+        android:layout_weight="6"
+        android:layout_gravity="center"
+        android:id="@+id/product_clearBtn_id"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_cancel_black_24dp"
+        android:background="#ffffff"
+      />
+
+</LinearLayout>

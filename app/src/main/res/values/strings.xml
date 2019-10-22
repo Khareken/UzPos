@@ -86,6 +86,9 @@
     <string name="assorti_iz_suxoproduktov_lazzat">Ассорти из сухофруктов Лаззат</string>
     <string name="todo">TODO</string>
     <string name="path">Все категории\t/ Овощи и фрукты /\tФрукты / Персик инжир, вес</string>
+    <string name="categories">Categories</string>
+    <string name="delete_all">Удалить все</string>
+    <string name="pay">PAY</string>
     <string-array name="products_array">
         <item>Coca-cola</item>
         <item>PallMall</item>

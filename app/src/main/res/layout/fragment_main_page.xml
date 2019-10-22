@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/chut_chut_gray_white"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/chut_chut_gray_white">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#F5F5F5"
+        android:background="@drawable/bg_white_bordered_gray"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@id/guideline_horri"
         app:layout_constraintEnd_toStartOf="@id/guideline_verti"
@@ -18,9 +17,10 @@
 
         <TextView
             android:id="@+id/_N"
-            android:layout_width="56dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:layout_weight="6.8"
             android:gravity="center"
             android:text="@string/_N"
             android:textColor="#576271"
@@ -28,9 +28,9 @@
 
         <TextView
             android:id="@+id/Name_text"
-            android:layout_width="240dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-
+            android:layout_weight="30"
             android:gravity="center_vertical"
             android:text="@string/Name_text"
             android:textColor="#576271"
@@ -38,27 +38,33 @@
 
         <TextView
             android:id="@+id/Price_text"
-            android:layout_width="144dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-
+            android:layout_weight="18"
             android:gravity="center"
+            android:paddingStart="5dp"
             android:text="@string/Price_text"
             android:textColor="#576271"
             android:textSize="@dimen/top_element_text_size" />
+
         <TextView
             android:id="@+id/Amount_text"
-            android:layout_width="160dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-
+            android:layout_marginEnd="2dp"
+            android:layout_weight="20"
             android:gravity="center"
+            android:paddingStart="8dp"
             android:text="@string/Amount_text"
             android:textColor="#576271"
             android:textSize="@dimen/top_element_text_size" />
 
         <TextView
             android:id="@+id/Sum_text"
-            android:layout_width="160dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginEnd="58dp"
+            android:layout_weight="20"
             android:gravity="center"
             android:text="@string/Sum_text"
             android:textColor="#576271"
@@ -66,179 +72,12 @@
     </LinearLayout>
 
 
-    <AutoCompleteTextView
-        android:id="@+id/searchView"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_margin="24dp"
-        android:background="@drawable/bg_white_bordered_gray"
-        android:drawableEnd="@drawable/ic_search_black_24dp"
-        android:hint="@string/search"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/sale_date_text"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="96dp"
-        android:paddingStart="2dp"
-        android:text="@string/sale_date_text"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/status_of_sale_text"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/status_of_sale_text"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
-        app:layout_constraintTop_toBottomOf="@id/sale_date_text"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/id_of_sale_text"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/id_of_sale_text"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
-        app:layout_constraintTop_toBottomOf="@+id/status_of_sale_text"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/subtotal_of_sale_text"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/subtotal_of_sale_text"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
-        app:layout_constraintTop_toBottomOf="@+id/id_of_sale_text"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/discount_of_sale_text"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/discount_of_sale_text"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
-        app:layout_constraintTop_toBottomOf="@+id/subtotal_of_sale_text"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/sum_of_sale_text"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/sum_of_sale_text"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
-        app:layout_constraintTop_toBottomOf="@+id/discount_of_sale_text"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/sale_date"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:paddingStart="2dp"
-        android:text="@string/sale_date"
-        android:textColor="@color/standard_text_color"
-        app:layout_constraintStart_toEndOf="@+id/sale_date_text"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/status_of_sale"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/status_of_sale"
-        android:textColor="@color/standard_text_color"
-        app:layout_constraintStart_toEndOf="@+id/status_of_sale_text"
-        app:layout_constraintTop_toBottomOf="@+id/sale_date"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/id_of_sale"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/id_of_sale"
-        android:textColor="@color/standard_text_color"
-        app:layout_constraintStart_toEndOf="@+id/id_of_sale_text"
-        app:layout_constraintTop_toBottomOf="@+id/status_of_sale"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/subtotal_of_sale"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/subtotal_of_sale"
-        android:textColor="@color/standard_text_color"
-        app:layout_constraintStart_toEndOf="@+id/subtotal_of_sale_text"
-        app:layout_constraintTop_toBottomOf="@+id/id_of_sale"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/discount_of_sale"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/discount_of_sale"
-        android:textColor="@color/standard_text_color"
-        app:layout_constraintStart_toEndOf="@+id/discount_of_sale_text"
-        app:layout_constraintTop_toBottomOf="@+id/subtotal_of_sale"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/sum_of_sale"
-        android:layout_width="@dimen/sale_info_width"
-        android:layout_height="@dimen/sale_info_height"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="2dp"
-        android:text="@string/sum_of_sale"
-        android:textColor="@color/standard_text_color"
-
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/sum_of_sale_text"
-        app:layout_constraintTop_toBottomOf="@+id/discount_of_sale"
-        tools:ignore="RtlSymmetry" />
-
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_verti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.63125" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horri"
@@ -251,292 +90,210 @@
         android:id="@+id/productsRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horri_bottom"
         app:layout_constraintEnd_toStartOf="@+id/guideline_verti"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_horri" />
 
-    <RelativeLayout
+    <AutoCompleteTextView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_search_view"
+        android:drawableEnd="@drawable/ic_search_black_24dp"
+        android:hint="@string/search"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:name="uz.aliensoft.uzpos.ui.warehouse.WarehousePageFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline_verti"
-        app:layout_constraintTop_toBottomOf="@id/guideline_number_top"
-        app:layout_constraintVertical_bias="1.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:background="@color/chut_chut_gray_white">
-
-            <Button
-                android:id="@+id/button_1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/margin_24dp_Start_Top"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_1"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_4"
-                app:layout_constraintEnd_toStartOf="@id/button_2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/button_4"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/margin_24dp_Start_Top"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_4"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_7"
-                app:layout_constraintEnd_toStartOf="@id/button_5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_1" />
-
-            <Button
-                android:id="@+id/button_7"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/margin_24dp_Start_Top"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_7"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_00"
-                app:layout_constraintEnd_toStartOf="@id/button_8"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_4" />
-
-            <Button
-                android:id="@+id/button_2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_2"
-                android:textColor="@color/standard_text_color"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_5"
-                app:layout_constraintEnd_toStartOf="@id/button_3"
-                app:layout_constraintStart_toEndOf="@+id/button_1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/button_8"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_8"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_0"
-                app:layout_constraintEnd_toStartOf="@id/button_9"
-                app:layout_constraintStart_toEndOf="@+id/button_7"
-                app:layout_constraintTop_toBottomOf="@+id/button_5" />
-
-            <Button
-                android:id="@+id/button_pay"
-                android:layout_width="0dp"
-                android:layout_height="56dp"
-                android:layout_marginStart="@dimen/margin_24dp_Start_Top"
-                android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
-                android:layout_marginBottom="@dimen/margin_24dp_Start_Top"
-                android:background="#28B473"
-                android:text="@string/pay_btn_text"
-                android:textColor="#ffffff"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button_comma" />
-
-            <Button
-                android:id="@+id/button_0"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_standard"
-
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_0"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@+id/button_pay"
-                app:layout_constraintEnd_toStartOf="@id/button_comma"
-                app:layout_constraintStart_toEndOf="@+id/button_00"
-                app:layout_constraintTop_toBottomOf="@+id/button_8" />
-
-            <Button
-                android:id="@+id/button_3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_3"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_6"
-                app:layout_constraintEnd_toStartOf="@id/button_C"
-                app:layout_constraintStart_toEndOf="@+id/button_2"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/button_6"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_6"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_9"
-                app:layout_constraintEnd_toStartOf="@id/button_backspace"
-                app:layout_constraintStart_toEndOf="@+id/button_5"
-                app:layout_constraintTop_toBottomOf="@+id/button_3" />
-
-            <Button
-                android:id="@+id/button_9"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_9"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_comma"
-                app:layout_constraintEnd_toStartOf="@id/button_enter"
-                app:layout_constraintStart_toEndOf="@+id/button_8"
-                app:layout_constraintTop_toBottomOf="@+id/button_6" />
-
-            <Button
-                android:id="@+id/button_comma"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_standard"
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_dot"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@+id/button_pay"
-                app:layout_constraintEnd_toStartOf="@id/button_enter"
-                app:layout_constraintStart_toEndOf="@+id/button_0"
-                app:layout_constraintTop_toBottomOf="@+id/button_9" />
-
-            <Button
-                android:id="@+id/button_C"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_calculator_functions_btn"
-                android:text="@string/C"
-                android:textColor="#636363"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@id/button_backspace"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button_3"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_weight="1" />
-
-            <Button
-                android:id="@+id/button_5"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
-
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_5"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_8"
-                app:layout_constraintEnd_toStartOf="@id/button_6"
-                app:layout_constraintStart_toEndOf="@+id/button_4"
-                app:layout_constraintTop_toBottomOf="@+id/button_2" />
-
-            <Button
-                android:id="@+id/button_00"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/margin_24dp_Start_Top"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_standard"
-
-                android:background="@drawable/bg_white_bordered_gray"
-                android:text="@string/_00"
-                android:textColor="#000000"
-                android:textSize="@dimen/number_btn_text_size"
-                app:layout_constraintBottom_toTopOf="@id/button_pay"
-                app:layout_constraintEnd_toStartOf="@id/button_0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button_7" />
-
-            <ImageButton
-                android:id="@+id/button_enter"
-                android:layout_width="100dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
-                android:layout_marginBottom="@dimen/margin_standard"
-                android:background="@drawable/bg_calculator_functions_btn"
-                android:src="@drawable/ic_keyboard_return_black_24dp"
-                app:layout_constraintBottom_toTopOf="@id/button_pay"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button_9"
-                app:layout_constraintTop_toBottomOf="@id/button_backspace"
-                app:layout_constraintVertical_weight="2.13"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/button_backspace"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="@dimen/margin_24dp_Start_Top"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:background="@drawable/bg_calculator_functions_btn"
-                android:src="@drawable/ic_backspace_black_24dp"
-                app:layout_constraintBottom_toTopOf="@id/button_enter"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/button_6"
-                app:layout_constraintTop_toBottomOf="@id/button_C"
-                app:layout_constraintVertical_weight="1"
-                tools:ignore="ContentDescription" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </RelativeLayout>
+        app:layout_constraintStart_toStartOf="@+id/guideline_verti"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_number_top"
+        android:id="@+id/guideline_horri_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_percent="0.8" />
 
+    <LinearLayout
+        android:background="@drawable/bg_white_bordered_gray"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_verti"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horri_bottom"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/bottom_texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_horri_bottom">
+
+            <TextView
+                android:id="@+id/date_of_sold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Дата продажи:"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_of_sold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="ID продажи:"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_of_sold_text" />
+
+            <TextView
+                android:id="@+id/sum_of_sold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:text="Промеж. итог:"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_of_sold_text" />
+
+            <TextView
+                android:id="@+id/discount_of_sold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Скидка:"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sum_of_sold_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bottom_texts"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_horri_bottom">
+
+            <TextView
+                android:id="@+id/date_of_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="March 15, 2019"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/id_of_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="#1234567"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_of_sold" />
+
+            <TextView
+                android:id="@+id/sum_of_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="2930.00"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_of_sold" />
+
+            <TextView
+                android:id="@+id/discount_of_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="12.9%"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sum_of_sold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sum_of_sold_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:text="UZS 2930.00"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bottom_information" />
+
+        <LinearLayout
+
+            android:layout_marginStart="59dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:orientation="vertical">
+
+            <Button
+
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#EF6263"
+                android:text="@string/delete_all"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/btn_pay"
+                app:layout_constraintEnd_toEndOf="@id/guideline_verti" />
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@color/green_anywhere"
+                android:gravity="center"
+                android:text="@string/pay"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_verti" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

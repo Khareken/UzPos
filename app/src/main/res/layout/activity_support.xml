@@ -9,7 +9,7 @@
         android:id="@+id/support_page_uz_pos_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="@string/uzpos_support_oage"
         android:textColor="@color/green_anywhere"
         android:textSize="60sp"
@@ -22,7 +22,7 @@
         android:id="@+id/big_text"
         android:layout_width="482dp"
         android:layout_height="200dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/motivation_text"
         android:textColor="@color/primaryTextColor"
@@ -30,6 +30,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/support_page_uz_pos_text" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/big_text"
+    android:layout_marginBottom="20dp">
 
     <Button
         android:id="@+id/support_page_number"
@@ -72,7 +81,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_24dp_Start_Top"
         android:layout_marginBottom="56dp"
-        android:background="@drawable/support_site_btn_bg"
+        android:background="@drawable/bg_support_site_btn"
         android:drawableStart="@drawable/ic_globus_black_40dp"
         android:gravity="center"
         android:paddingStart="28dp"
@@ -84,5 +93,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/support_page_bot_link" />
-
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
